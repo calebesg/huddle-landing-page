@@ -1,0 +1,32 @@
+/* Global ========================== */
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: url(./images/bg-desktop.svg) no-repeat var(--violet);
+}
+
+body,
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Main ========================== */
+.title {
+  font-family: 'Poppins', sans-serif;
+}
