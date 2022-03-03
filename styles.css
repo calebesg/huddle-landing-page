@@ -2,6 +2,7 @@
 :root {
   --violet: hsl(257, 40%, 49%);
   --soft-magenta: hsl(300, 69%, 71%);
+  --havy-magenta: #fd52c2;
 }
 
 * {
@@ -12,7 +13,13 @@
 
 body {
   min-height: 100vh;
-  background: url(./images/bg-desktop.svg) no-repeat var(--violet);
+  background: url(./images/bg-desktop.svg) fixed no-repeat var(--violet);
+  background-size: contain;
+  color: white;
+  padding-top: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body,
@@ -21,12 +28,77 @@ button {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 80rem;
   width: 100%;
-  margin: 0 auto;
 }
 
 /* Main ========================== */
+main {
+  padding-top: 5.5rem;
+  display: flex;
+  gap: 3.625rem;
+}
+
+main img {
+  width: 100%;
+}
+
 .title {
+  margin-top: 3.125rem;
   font-family: 'Poppins', sans-serif;
+  font-size: 2.25rem;
+  padding-right: 2rem;
+}
+
+.description {
+  margin-top: 2.25rem;
+  padding-right: 3rem;
+}
+
+main button {
+  margin-top: 1.625rem;
+  width: 12.5rem;
+  height: 3.5rem;
+  border-radius: 1.75rem;
+  border: none;
+  color: var(--violet);
+  font-size: 1.125rem;
+  box-shadow: 0.25rem 0.5rem 0.75rem rgba(0, 0, 0, .2);
+  transition: all .2s;
+}
+
+main button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: var(--soft-magenta);
+}
+
+/* Footer ========================== */
+footer {
+  height: 6.25rem;
+  margin-top: auto;
+}
+
+.social {
+  float: right;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social i {
+  width: 2.625rem;
+  height: 2.625rem;
+  text-align: center;
+  line-height: 2.625rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  transition: all .2s;
+}
+
+.social i:hover {
+  color: var(--havy-magenta);
+  border-color: var(--havy-magenta);
 }
