@@ -16,7 +16,7 @@ body {
   background: url(./images/bg-desktop.svg) fixed no-repeat var(--violet);
   background-size: contain;
   color: white;
-  padding-top: 3.125rem;
+  padding: 3.125rem 3.125rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,10 +77,11 @@ main button:hover {
 footer {
   height: 6.25rem;
   margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .social {
-  float: right;
   list-style: none;
   display: flex;
   align-items: center;
@@ -101,4 +102,53 @@ footer {
 .social i:hover {
   color: var(--havy-magenta);
   border-color: var(--havy-magenta);
+}
+
+@media only screen and (max-width: 68.75rem) {
+  body {
+    background: url(./images/bg-mobile.svg) fixed no-repeat var(--violet);
+    background-size: contain;
+    padding: 2.5rem 2.5rem 0;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  main {
+    flex-direction: column;
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .description {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    padding: 0;
+  }
+
+  main button {
+    height: 2.875rem;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  .social i {
+    width: 2.2rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    font-size: 0.9rem;
+  }
 }
